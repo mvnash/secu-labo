@@ -1,0 +1,37 @@
+1. L’adresse ip 92.242.140.21 a eu une drôle d’activité, en regardant tous les paquets lié à cette
+ip, pouvez-vous en déduire son comportement ?
+ip.addr==92.242.140.21
+Indice : Quel est le type ICMP ?
+
+-> Il a envoyé des ICMP a bcp d'adresse
+
+2. Même question pour l’ip 192.168.11.62 avec le port source 52999.
+ip.addr==192.168.11.62 and tcp.port==52999
+Indice : Three-way handshake
+-> Il essaie de se connecter à pleins de ports
+
+3. Un paquet peut en cacher un autre …
+Pour cette exercice, nous allons nous intéresser aux paquets échangés entre 92.68.122.132 et
+184.168.221.63.
+ip.addr==184.168.221.63 and ip.addr==92.68.122.132
+1. Quel est l’unique type de paquet échangé ? -> ICMP
+2. La taille de certains paquets ne vous semble-t-elle pas un peu grosse pour ce type de
+paquet ? Qu’y a-t-il dans les paquets plus gros ? -> oui il y a du ascii qui ressemble a du ssh
+3. Pourquoi donc quelqu’un ferait-il ça ?  -> pour encapsuler le ssh et contourner une limitation
+
+
+
+4. La plupart du temps, les protocoles ont leur contenu séparé dans plusieurs paquets et les lire
+un par un pour essayer de dégager le sens général de l’échange est fastidieux. Pour régler ce
+problème, intéressons nous maintenant à la fonctionnalité de Wireshark « follow : tcpstream ». Celle-ci permet de rassembler le contenu de plusieurs paquets.
+En scrollant un peu dans ce pcap, vous devriez voir des paquets du protocole IMAP (mail),
+effectuer un clique-droit, follow : tcp-stream. Que constatez-vous ?
+->Il y a bcp de check et de fetch separés ca envoie un .exe
+
+5. Un peu plus loin, vous pouvez trouver du trafic SMB avec un serveur SMB qui semble se
+trouver sur 192.168.1.8, procédez à l’inspection du tcp-stream comme nous l’avons vu à
+l’exercice précédent.
+-> ?
+
+
+
