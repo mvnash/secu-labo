@@ -1,0 +1,13 @@
+Version windows: Windows 10 Pro
+Liste User : Administrateur [500] , Invit├® [501], DefaultAccount [503], MediaMonster [1003]
+User principal : MediaMonster
+Nom machine : DESKTOP-7PCSTU8
+
+Timezone : UTC+1 -> Romance Standard Time
+Ca veut dire que c'est l'heure UTC
+Derniere fois Eteinte : 2019-11-01 18:36:35Z
+Derniere Instalation : 2018-01-06 13:16:20Z
+
+
+Il ouvre un exe dont le nom dit qu'il a gagné 1M, il clique dessus, il ouvre intellij, plusieurs .exe , accede à la camera via chrome, et ca lance plein de programmes surement pour extraire des infos
+
