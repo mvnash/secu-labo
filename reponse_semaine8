@@ -1,0 +1,34 @@
+À quoi correspond la première partie ? 10.40.0.0 et 172.22.22.0 : Les ips
+
+▪ À quoi correspond la deuxième partie ? /29 et /27 : Le masque reseau
+
+Quels sont les adresses IP contenues dans ces réseaux ? 
+- 10.40.0.0 -> 
+        10.40.0.1
+        10.40.0.2
+        10.40.0.3
+        10.40.0.4
+- 172.22.22.0
+        172.22.22.1
+        172.22.22.2
+        172.22.22.24
+
+Quels sont les hôtes potentiellement contenu dans ce réseau ?
+de 10.40.0.0 à 10.40.0.7
+et de 172.22.22.0 à 172.22.22.31
+
+Comment pouvons-nous calculer ces valeurs ?
+2^(32-masque)
+
+◦ Une fois les hôtes trouvés, effectuez un scan rapide des ports les plus courant sur ces
+hôtes pour tenter d’identifier leur fonction dans le réseau
+- 10.40.0.0 -> 
+        10.40.0.1
+        10.40.0.2 : mail
+        10.40.0.3 : mysql
+        10.40.0.4 : ftp / telnet
+- 172.22.22.0
+        172.22.22.1
+        172.22.22.2 : http
+        172.22.22.24 : http : http-proxy
+
